@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="lg.css" />
+  </head>
+
+  <body>
+    <div class="fullscreen-container">
+      <div class="container">
+        <div class="heading">
+          <h1>Welcome to <span> E-library!!</span></h1>
+        </div>
+
+        <div class="form-container">
+          <form action="log-process.jsp" method="post">
+            <div class="input-group">
+              <label for="email">Email</label><br /><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label><br /><br />
+              <input
+                type="password"
+                id="myInput"
+                name="password"
+                placeholder="Enter password"
+              /><br /><br />
+              <input
+                type="checkbox"
+                onclick="myFunction()"
+                placeholder="click to show psw"
+                id="psw"
+              />&nbsp;Show Password
+            </div>
+          </form>
+          <div class="input-group">
+            <button type="submit">Log In</button>
+          </div>
+
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not
+            a member?&nbsp;&nbsp;<a href="register.jsp">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>
